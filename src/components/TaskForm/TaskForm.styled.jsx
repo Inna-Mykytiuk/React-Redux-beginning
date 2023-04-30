@@ -1,15 +1,30 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
+  width: 100%;
   display: flex;
   gap: 4px;
 `;
 export const Field = styled.input`
-  flex-grow: 1;
-  padding: 8px;
-  font: inherit;
+  width: 100%;
+  background-color: transparent;
 
-  &:focus {
-    outline-color: #1976d2;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
+  &:focus-within {
+    /* border-bottom: 1px solid #9eb7e5; */
+    box-shadow: 0 3px 15px rgb(43, 46, 48);
+    border-radius: 5px;
+  }
+
+  &::placeholder {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-shadow: rgba(255, 255, 255, 0.1) -1px -1px 1px,
+      rgba(0, 0, 0, 0.5) 1px 1px 1px;
   }
 `;

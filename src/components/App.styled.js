@@ -5,8 +5,22 @@ export const AppWrapper = styled.div`
   display: flex;
   gap: 30px;
   justify-content: center;
+  margin-bottom: 30px;
+`;
+export const AppWrapperColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  /* align-items: center; */
+  align-items: center;
+  /* color: rgb(24 13 13); */
+  color: #fff;
+  backdrop-filter: blur(20px);
+  background-color: #5a48483b;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+
+  padding: 20px 30px;
+  border-radius: 10px;
 `;
 
 export const TextReportB = styled.div`

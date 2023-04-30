@@ -13,19 +13,19 @@ export const StyledButton = styled.button`
 
   cursor: pointer;
   background-color: ${({ selected }) =>
-    selected ? 'rgb(215 67 67)' : 'rgb(229 188 188)'};
+    selected ? 'rgb(131 108 104)' : 'rgb(228, 195, 173)'};
   color: ${({ selected }) => (selected ? '#fff' : 'inherit')};
 
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 6px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &.isSelected {
-    background-color: rgb(215 67 67);
+    background-color: rgb(131 108 104);
     color: #fff;
   }
 
   &:hover {
-    background-color: rgb(215 67 67);
+    background-color: rgb(131 108 104);
     color: #fff;
   }
 `;

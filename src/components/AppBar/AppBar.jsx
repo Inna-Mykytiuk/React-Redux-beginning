@@ -1,6 +1,6 @@
 import { StatusFilter } from 'components/StatusFilter/StatusFilter';
 import { TaskCounter } from 'components/TaskCounter/TaskCounter';
-import { Wrapper, Section, Title, MainTitle, Img } from './AppBar.styled';
+import { Section, Title, MainTitle, Img } from './AppBar.styled';
 import { Button } from 'components/Button/Button';
 import { useDispatch } from 'react-redux';
 import { deleteCompleted } from 'redux/actions';
@@ -10,7 +10,7 @@ import arrowImg from '../../pictures/arrows4w.png';
 export const AppBar = () => {
   const dispatch = useDispatch();
   return (
-    <Wrapper>
+    <>
       <MainTitle>Todo List</MainTitle>
       <Img src={arrowImg} alt="arrows" />
       <AppWrapper>
@@ -29,6 +29,6 @@ export const AppBar = () => {
           <StatusFilter />
         </Section>
       </AppWrapper>
-    </Wrapper>
+    </>
   );
 };
