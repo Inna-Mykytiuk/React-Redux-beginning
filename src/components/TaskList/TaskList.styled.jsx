@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const List = styled.ul`
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -8,6 +9,6 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   &:not(:first-child) {
-    border-top: 1px solid #2f2f37;
+    border-top: 1px solid #fff;
   }
 `;

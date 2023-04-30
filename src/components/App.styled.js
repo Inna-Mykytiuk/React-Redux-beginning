@@ -5,7 +5,7 @@ export const AppWrapper = styled.div`
   display: flex;
   gap: 30px;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 `;
 export const AppWrapperColumn = styled.div`
   display: flex;
@@ -15,7 +15,7 @@ export const AppWrapperColumn = styled.div`
   align-items: center;
   /* color: rgb(24 13 13); */
   color: #fff;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
   background-color: #5a48483b;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 

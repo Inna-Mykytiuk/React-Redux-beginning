@@ -38,7 +38,7 @@ export const Checkbox = styled.input`
   border-radius: 4px;
   padding: 8px;
   font-size: 16px;
-  /* width: 100%; */
-  margin-bottom: 12px;
+
   outline: none;
+  accent-color: rgb(221 52 23);
 `;

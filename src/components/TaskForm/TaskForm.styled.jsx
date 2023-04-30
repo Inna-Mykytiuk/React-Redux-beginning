@@ -4,6 +4,7 @@ export const Form = styled.form`
   width: 100%;
   display: flex;
   gap: 4px;
+  margin-bottom: 20px;
 `;
 export const Field = styled.input`
   width: 100%;
@@ -18,6 +19,7 @@ export const Field = styled.input`
     /* border-bottom: 1px solid #9eb7e5; */
     box-shadow: 0 3px 15px rgb(43, 46, 48);
     border-radius: 5px;
+    color: #fff;
   }
 
   &::placeholder {
