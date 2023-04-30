@@ -16,7 +16,6 @@ export const Field = styled.input`
   outline: none;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
   &:focus-within {
-    /* border-bottom: 1px solid #9eb7e5; */
     box-shadow: 0 3px 15px rgb(43, 46, 48);
     border-radius: 5px;
     color: #fff;

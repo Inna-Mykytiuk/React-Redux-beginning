@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  /* width: 80%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,7 +15,7 @@ export const Section = styled.section`
 export const MainTitle = styled.h1`
   font-size: 36px;
   font-weight: 700;
-  /* color: rgb(48, 20, 20); */
+
   color: #fff;
   text-align: center;
   margin: 0;
