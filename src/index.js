@@ -1,22 +1,38 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { ThemeProvider } from 'styled-components';
 import { App } from 'components/App';
-// import './index.css';
 import { GlobalStyle } from 'GlobalStyle';
 
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <React.StrictMode>
-//     <App />
-//     <GlobalStyle />
-//   </React.StrictMode>
-// );
-
-import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { store } from './redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
+import { persistor, store } from './redux/store';
+
+const theme = {
+  colors: {
+    primary: '#ffffff',
+    secondary: '#f2f2f2',
+    accent: '#ff6f61',
+    text: '#000000',
+    textSecondary: '#ffffff',
+    textAccent: '#ffffff',
+  },
+  breakpoints: {
+    mobileMax: 767,
+  },
+};
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
-    <App />
-    <GlobalStyle />
-  </Provider>
+  <React.StrictMode>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+        <GlobalStyle />
+      </PersistGate>
+    </Provider>
+  </React.StrictMode>
 );
+
+//<PersistGate loading={null} persistor={persistor}>

@@ -1,3 +1,4 @@
+//в actions прописуємо всі можливі екшени(події), які можуть виконуватися в нашому додатку
 import { nanoid } from 'nanoid';
 export const addTask = text => {
   return {
