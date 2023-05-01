@@ -1,8 +1,11 @@
 import { createStore } from 'redux';
 import { devToolsEnhancer } from '@redux-devtools/extension';
-import { rootReducer } from './reducer';
+// import { rootReducer } from './reducer';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { tasksReducer } from './tasksSlice';
+import { filtersReducer } from './filtersSlice';
+import { combineReducers } from 'redux';
 
 const persistConfig = {
   key: 'root',
@@ -12,6 +15,11 @@ const persistConfig = {
   // whitelist: ['navigation'],
 };
 
+const rootReducer = combineReducers({
+  tasks: tasksReducer,
+  filters: filtersReducer,
+});
+
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 // const enhancer = devToolsEnhancer();
@@ -19,3 +27,24 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = createStore(persistedReducer, devToolsEnhancer());
 export const persistor = persistStore(store);
+
+// import { configureStore } from '@reduxjs/toolkit';
+// import { tasksReducer } from './tasksSlice';
+// import { filtersReducer } from './filtersSlice';
+
+// import { persistReducer, persistStore } from 'redux-persist';
+// import storage from 'redux-persist/lib/storage';
+
+// const contactsConfig = {
+//   key: 'tasks',
+//   storage,
+// };
+
+// export const store = configureStore({
+//   reducer: {
+//     tasks: persistReducer(contactsConfig, tasksReducer),
+//     filters: filtersReducer,
+//   },
+// });
+
+// export const persistor = persistStore(store);

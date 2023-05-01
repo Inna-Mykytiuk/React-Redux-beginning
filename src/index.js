@@ -25,14 +25,15 @@ const theme = {
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
+      <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
         <ThemeProvider theme={theme}>
           <App />
+          <GlobalStyle />
         </ThemeProvider>
-        <GlobalStyle />
       </PersistGate>
     </Provider>
   </React.StrictMode>
 );
 
+//<PersistGate loading={null} persistor={persistor}>
 //<PersistGate loading={null} persistor={persistor}>
