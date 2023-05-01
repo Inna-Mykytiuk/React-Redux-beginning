@@ -3,7 +3,8 @@ import { TaskCounter } from 'components/TaskCounter/TaskCounter';
 import { Section, Title, MainTitle, Img } from './AppBar.styled';
 import { Button } from 'components/Button/Button';
 import { useDispatch } from 'react-redux';
-import { deleteCompleted } from 'redux/actions';
+// import { deleteCompleted } from 'redux/actions';
+import { deleteCompleted } from 'redux/tasksSlice';
 import { AppWrapper } from 'components/App.styled';
 import arrowImg from '../../pictures/arrows4w.png';
 
